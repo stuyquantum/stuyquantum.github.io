@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bgimg {
+        background-image: url('img/background.png');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+
+    .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+    }
+
+    .middle {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -300%);
+        text-align: center;
+    }
+
+    hr {
+        margin: auto;
+        width: 40%;
+    }
+
+    .image-cropper {
+        width: 125px;
+        height: 125px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 20%;
+    }
+
+    img {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+    }
+</style>
+<title>Stuy Quantum</title>
+<link rel="shortcut icon" type="image/jpg" href="img/stuy_quantum_logo_tr.png" />
+
+<body>
+
+    <div class="bgimg">
+        <div class="topleft">
+            <p>
+            <div class="image-cropper">
+                <img src="img/stuy_quantum_logo_tr.png" class="rounded" />
+            </div>
+            </p>
+        </div>
+        <div class="middle">
+            <h1>STUY QUANTUM</h1>
+            <p id="demo" style="font-size:30px"></p>
+        </div>
+        <div class="bottomleft">
+            <p>
+                <a href="https://www.facebook.com/stuyquantum" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                        <path fill="white"
+                            d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                    </svg>
+                </a>
+            </p>
+        </div>
+    </div>
+
+   
+
+</body>
+
+</html>
