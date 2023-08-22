@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .showyes{
+        visibility: visible;
+    }
+
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+
+    html {
+    box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+    box-sizing: inherit;
+    }
+
+    .column {
+    float: left;
+    width: 50%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    }
+
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    }
+
+    .about-section {
+    padding: 50px;
+    background-color: #5a2320;
+    color: white;
+    }
+
+    .container {
+    padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    .title {
+    color: grey;
+    }
+
+    .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #5a2320;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    .button:hover {
+    background-color: rgb(107, 78, 78);
+    }
+
+    @media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+
+    }
+
+    * {box-sizing: border-box}
+        .mySlides1, .mySlides2 {display: none}
+        img {vertical-align: middle;}
+
+        /* Slideshow container */
+        .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a grey background color */
+        .prev:hover, .next:hover {
+        background-color: #f1f1f1;
+        color: black;
+        }
+
+
+
+    /* Add a black background color to the top navigation */
+    .topnav {
+    background-color: #5a2320;
+    overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+    background-color: #7a3333;
+    color: rgb(255, 255, 255);
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+    background-color: #7a3333;
+    color: rgb(255, 255, 255);
+    }
+</style>
+<body>
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a class="active" href="content.html">Content</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="resources.html">Resources</a>
+    </div>
+    <div class = "showyes" id = "showyes">
+         <div class="about-section">
+            <h1 style="text-align:center">Past Lessons</h1>
+            <p style="text-align:center">Brief Description</p>
+          </div>
+          <h2 style="text-align:center">Our Slideshows</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <div class="mySlides1">
+                      <img src="img/slide1_1.png" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides1">
+                      <img src="img/slide1_2.png" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides1">
+                      <img src="img/slide1_3.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides1">
+                      <img src="img/slide1_4.png" style="width:100%">
+                    </div>
+
+                    <div class="mySlides1">
+                      <img src="img/slide1_5.png" style="width:100%">
+                    </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                  </div>
+                <div class="container">
+                  <h2>Lesson 1</h2>
+                  <p class="title">08/20/2023</p>
+                  <p>Lesson description</p>
+                  <p><a href="https://docs.google.com/presentation/d/1LUIZ6btufBOjSwZ20IIV5sRYBrSQssC3aHw7_Gw1-gw/edit#slide=id.p"><button class="button">Link to Slides</button></a></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <div class="mySlides2">
+                      <img src="img/filler.jpeg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides2">
+                      <img src="img/filler.jpeg" style="width:100%">
+                    </div>
+                  
+                    <div class="mySlides2">
+                      <img src="img/filler.jpeg" style="width:100%">
+                    </div>
+                  
+                    <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                  </div>
+                <div class="container">
+                  <h2>Lesson 2</h2>
+                  <p class="title">08/20/2023</p>
+                  <p>Lesson description</p>
+                  <p><a href=""><button class="button">Link to Slides</button></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script>
+        if(prompt("Enter password") == "stuy23/24"){}
+        else{
+            document.getElementById("showyes").style.display = "none";
+        }
+        let slideIndex = [1,1];
+        let slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+        showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+        let i;
+        let x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {slideIndex[no] = 1}    
+        if (n < 1) {slideIndex[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex[no]-1].style.display = "block";  
+        }
+    </script>
+</body>
+
+</html>
