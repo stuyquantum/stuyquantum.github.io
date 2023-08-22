@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     body,
     html {
@@ -18,48 +21,10 @@
         font-size: 25px;
     }
 
-    .topleft {
-        position: absolute;
-        top: 0;
-        left: 16px;
-    }
-
-    .topright {
-        position: absolute;
-        top: 0;
-        right: 16px;
-    }
-
-    .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
-    }
-
-    .bottomright {
-        position: absolute;
-        bottom: 0;
-        right: 16px;
-    }
-    .middle {
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -300%);
-        text-align: center;
-    }
 
     hr {
         margin: auto;
         width: 40%;
-    }
-
-    .image-cropper {
-        width: 125px;
-        height: 125px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 20%;
     }
 
     img {
@@ -69,108 +34,138 @@
         width: auto;
     }
 
-
-    /* Dropdown Button */
-    .dropbtn {
-    background-color: #fc1d54;
+    /* Add a black background color to the top navigation */
+    .topnav {
+    background-color: #5a2320;
     font-family: "Helvetica";
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+    overflow: hidden;
     }
 
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-    position: relative;
-    display: inline-block;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 110px;
-    font-size: 12px;
-    font-family: "Helvetica";
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    }
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    /* Style the links inside the navigation bar */
+    .topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    font-size: 17px;
     }
 
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {background-color: #ddd;}
+    /* Change the color of links on hover */
+    .topnav a:hover {
+    background-color: #7a3333;
+    color: rgb(255, 255, 255);
+    }
 
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {display: block;}
+    /* Add a color to the active/current link */
+    .topnav a.active {
+    background-color: #7a3333;
+    color: rgb(255, 255, 255);
+    }
 
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {background-color: #fc1d54;}
+    /* Full height image header */
+    .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/background.png");
+    min-height: 100%;
+    }
 
-
-
-
+    .w3-bar .w3-button {
+    padding: 16px;
+    }
 </style>
 <title>Stuy Quantum</title>
 <link rel="shortcut icon" type="image/jpg" href="img/stuy_quantum_logo_tr.png" />
 
 <body>
+    <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="content.html">Content</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="resources.html">Resources</a>
+    </div>
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container" id="home">
+        <div class="w3-display-left w3-text-white" style="padding:48px">
+        <span class="w3-jumbo w3-hide-small">Stuy Quantum</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Stuy Quantum</span><br>
+        <span class="w3-large">Learn about one of the coolest and most increasingly popular fields.</span>
+        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start learning today!</a></p>
+        </div> 
+        <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
+            <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://www.instagram.com/stuyquantum/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        </div>
+    </header>
 
-    <div class="bgimg">
-        <div class="topleft">
-            <p>
-            <div class="image-cropper">
-                <img src="img/stuy_quantum_logo_tr.png" class="rounded" />
-            </div>
-            </p>
+    <!-- About Section -->
+    <div class="w3-container" style="padding:75px 16px" id="about">
+        <h2 class="w3-center">What is Stuy Quantum?</h2>
+        <div class="w3-container w3-center" style="height: 125px;">
+            <img src="img/stuy_quantum_logo_tr.png" class="rounded" />
         </div>
-        <div class="topright">
-            <p>
-                <div class="dropdown">
-                    <button class="dropbtn">Dropdown</button>
-                    <div class="dropdown-content">
-                      <a href="aboutus.html">About Us</a>
-                      <a href="content.html">Content</a>
-                      <a href="resources.html">Resources</a>
-                    </div>
-                  </div>
-            </p>
+        <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
+            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Our Purpose</p>
+            <p>StuyQuantum focuses on creating a strong community where 
+                students can learn about quantum computing and its different 
+                applications. This club will expose students to a realm of 
+                science they may not have learned about before and will allow 
+                them to connect the knowledge they learn about quantum computing 
+                with real life scenarios. Quantum computing can often be seen as 
+                a daunting field of science and this club aims to get rid of any 
+                fear associated with it. We hope to either inspire students to 
+                pursue quantum computing or just provide them with knowledge that 
+                they can take into their future careers. We wish to provide students 
+                with resources and connections that will benefit them in whatever 
+                career path they take. We will teach our members important concepts 
+                in quantum computing and different tools, such as qiskit(IBM), 
+                azure(Microsoft), etc. We hope to have talks with experienced people 
+                in this field, visit tech companies in this field, attend hackathons, 
+                and work on long term projects as a group.</p>
+
+
         </div>
-        <div class="middle">
-            <h1>STUY QUANTUM</h1>
-            <p id="demo" style="font-size:30px"></p>
+        <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
+            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Why join us?</p>
+            <p>What makes this organization unique is that it provides students with 
+                numerous resources and a strong community with which they can learn 
+                about quantum computing. Quantum computing is not taught in STEM 
+                classes in school. Our club hopes to educate students in this field, 
+                especially as it becomes increasingly relevant and important. We want 
+                to provide students with knowledge in this field as they don't seem to 
+                be getting it anywhere else. Although students can get this information 
+                online, our club aims to teach students about quantum computing in a fun 
+                and structured way, and provide a close community they can be a part of.</p>
         </div>
-        <div class="bottomleft">
-            <p>
-                <a href="https://www.facebook.com/stuyquantum" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                        <path fill="white"
-                            d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
-                    </svg>
-                </a>
-            </p>
-        </div>
-        <div class="bottomright">
-          <p>
-            <a href="https://www.instagram.com/stuyquantum/" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                <path fill="white"
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-          </p>
+        <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
+            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Our Benefits</p>
+            <p>Quantum computing has become an increasingly popular and important subject. 
+                It is considered to be the future because it allows us to solve large and 
+                complex problems that would not be able to be solved on a classical computer. 
+                As such, it is important for students to be able to learn about this interesting, 
+                new field of science. This club will help teach students about different and 
+                important concepts related to quantum computing. It will provide a community 
+                in which students can learn and grow with others who have the same interests 
+                as them. This club is open to students of all backgrounds and levels. We want 
+                to provide all students with the resources and community through which to 
+                explore quantum computing and make an impact in the field. We encourage everyone 
+                and anyone to join. Not only will students be able to gain conceptual knowledge 
+                in this field, but they will also be able to learn from experienced professionals 
+                and make connections with them. We will provide students with many opportunities 
+                to practice their skills, including possible hackathons, visits to companies, 
+                long-term club projects, resources and tools with which they can explore on their 
+                own, such as IBM qiskit, Microsoft azure, Google cirq, etc.</p>
         </div>
     </div>
-
-   
-
+    <!-- Footer -->
+    <footer class="w3-center w3-padding-64" style="background-color:#5a2320;color:white;">
+        <div class="w3-xlarge w3-section">
+            <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://www.instagram.com/stuyquantum/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        </div>
+        <p>Copyright (c) 2021 stuyquantum</p>
+    </footer>
 </body>
 
 </html>

@@ -223,9 +223,13 @@
           </div>
     </div>
     <script>
-        if(prompt("Enter password") == "stuy23/24"){}
+        if(prompt("Enter the password to access the page") == "stuy23/24"){}
         else{
             document.getElementById("showyes").style.display = "none";
+            function changeToHome(){
+              window.location.href = "index.html";
+            }
+            setTimeout( function() { changeToHome(); }, 10000);
         }
         let slideIndex = [1,1];
         let slideId = ["mySlides1", "mySlides2"]
