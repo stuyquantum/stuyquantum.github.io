@@ -1,47 +1,220 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-            background-color: #5a2320;
-        }
-        
-        .topnav {
-        background-color: #5a2320;
-        font-family: "Helvetica";
-        overflow: hidden;
-        }
+<style>
+    .text{
+        visibility: visible;
+    }
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
 
-        /* Style the links inside the navigation bar */
-        .topnav a {
-        float: left;
-        color: #ffffff;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        }
+    html {
+    box-sizing: border-box;
+    }
 
-        /* Change the color of links on hover */
-        .topnav a:hover {
-        background-color: #7a3333;
-        color: rgb(255, 255, 255);
-        }
+    *, *:before, *:after {
+    box-sizing: inherit;
+    }
 
-        /* Add a color to the active/current link */
-        .topnav a.active {
-        background-color: #7a3333;
-        color: rgb(255, 255, 255);
-        }
-    </style>
-    <body>
-        <div class="topnav">
-            <a href="index.html">Home</a>
-            <a href="content.html">Content</a>
-            <a href="aboutus.html">About Us</a>
-            <a class="active" href="resources.html">Resources</a>
-        </div>
-    </body>
+    .column {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    }
+
+    .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    }
+
+    .about-section {
+    padding: 50px;
+    background-color: #5a2320;
+    color: white;
+    }
+
+    .container {
+    padding: 0 16px;
+    }
+
+    .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    .title {
+    color: grey;
+    }
+
+    .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #5a2320;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    }
+
+    .button:hover {
+    background-color: rgb(107, 78, 78);
+    }
+
+    @media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+
+    }
+
+    /* Add a black background color to the top navigation */
+    .topnav {
+    background-color: #5a2320;
+    overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+    background-color: #7a3333;
+    color: rgb(255, 255, 255);
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+    background-color: #7a3333;
+    color: rgb(255, 255, 255);
+    }
+</style>
+<body>  
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="content.html">Content</a>
+        <a href="aboutus.html">About Us</a>
+        <a class="active" href="resources.html">Resources</a>
+      </div>
+          <div class="about-section">
+            <h1 style="text-align:center">Resources</h1>
+            <p style="text-align:center">For additional information about 
+                quantum computing topics and the field in general check out
+                resources below.</p>
+          </div>
+          <h2 style="text-align:center">Textbooks</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="img/qiskittext.png" alt="cover" style="width:100%">
+                <div class="container">
+                  <h2>Qiskit Textbook by IBM</h2>
+                  <p>The Qiskit Textbook is a free digital resource for those 
+                      learning about quantum algorithms and computations. It is 
+                      very suitable for beginners and can be found in an 
+                      interactive form that allows one to search for specific
+                      topics.</p>
+                  <p><a href="https://qiskit.org/learn"><button class="button">Learn More</button></a></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="img/quantumforthecurious.webp" alt="cover" style="width:100%">
+                <div class="container">
+                  <h2>Quantum Computing for the Quantum Curious</h2>
+                  <p>This is a free digital textbook that will teach you the concepts 
+                      of quantum computing while you learn to use the Qiskit SDK. It
+                      uses simple language with the only prerequisite being high school
+                      physics.</p>
+                  <p><a href="https://link.springer.com/book/10.1007/978-3-030-61601-4"><button class="button">Learn More</button></a></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="column">
+                <div class="card">
+                  <img src="img/anappliedapproach.jpeg" alt="cover" style="width:100%">
+                  <div class="container">
+                    <h2>Quantum Computing: An Applied Approach</h2>
+                    <p>The first book to give hands-on coding instruction approach on quantum computing. 
+                        It teaches the foundations of quantum computing through the lense of code.</p>
+                    <p><a href="https://link.springer.com/book/10.1007/978-3-030-23922-0"><button class="button">Learn More</button></a></p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="img/quantumforeveryone.webp" alt="cover" style="width:100%">
+                <div class="container">
+                  <h2>Quantum Computing for Everyone</h2>
+                  <p>A book designed for the general reader that provides an accessible introduction to
+                      a new area of study: quantum computing.
+                  </p>
+                  <p><a href="https://mitpress.mit.edu/9780262539531/quantum-computing-for-everyone/"><button class="button">Learn More</button></a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 style="text-align:center;">Videos</h2>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="img/richardwang.png" alt="cover" style="width:100%">
+                <div class="container">
+                  <h2>Introduction to Quantum Computing Series by Richard Wang</h2>
+                  <p>In these lectures Richard Wang covers the basics of quantum
+                      computing and some of the applications of the topics learned.
+                  </p>
+                  <p><a href="https://youtu.be/7qbavq8wFZM?si=8XjlJApynSMShYJs"><button class="button">Learn More</button></a></p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="img/quantumcompexplain.jpeg" alt="cover" style="width:100%">
+                <div class="container">
+                  <h2>Quantum Computers Explained - Limits of Human Technology</h2>
+                  <p>This video by Kurzgesat gives a very brief overview of what quantum 
+                      computing is, but explains it in a very understandable manner and
+                      covers the importance of this field.
+                  </p>
+                  <p><a href="https://www.youtube.com/watch?v=JhHMJCUmq28&t=7s"><button class="button">Learn More</button></a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                  <img src="img/ryan.jpeg" alt="cover" style="width:100%">
+                  <div class="container">
+                    <h2>Quantum Computation and Information at CMU</h2>
+                    <p>Ryan O'Donnell is a professor at Carnegie Mellon University and 
+                        teaches a college course on quantum computing. He has a playlist
+                        on Youtube of his recorded lectures for the semester and it covers
+                        many of the major quantum computing topics from the basics.
+                    </p>
+                    <p><a href="https://www.youtube.com/watch?v=78tSf2R1huk&list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz&pp=iAQB"><button class="button">Learn More</button></a></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+</body>
+
 </html>
