@@ -10,18 +10,6 @@
         margin: 0;
     }
 
-    .bgimg {
-        background-image: url('img/background.png');
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-        color: white;
-        font-family: "Courier New", Courier, monospace;
-        font-size: 25px;
-    }
-
-
     hr {
         margin: auto;
         width: 40%;
@@ -34,14 +22,12 @@
         width: auto;
     }
 
-    /* Add a black background color to the top navigation */
     .topnav {
-    background-color: #5a2320;
-    font-family: "Helvetica";
-    overflow: hidden;
+        background-color: #5a2320;
+        font-family: "Helvetica";
+        overflow: hidden;
     }
 
-    /* Style the links inside the navigation bar */
     .topnav a {
     float: left;
     color: #ffffff;
@@ -67,13 +53,116 @@
     .bgimg-1 {
     background-position: center;
     background-size: cover;
-    background-image: url("img/background.png");
+    background-image: url("img/quantumcompcopy.jpeg");
     min-height: 100%;
     }
 
     .w3-bar .w3-button {
     padding: 16px;
     }
+
+    /* Calendar */
+    .event-container {
+        font-family: "Roboto", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .event-container h3.year {
+        font-size: 40px;
+        text-align: center;
+        border-bottom: 1px solid #5a2320;
+        color:#5a2320;
+    }
+
+    .event-container .event {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+        display: flex;
+        border-radius: 8px;
+        margin: 32px 0;
+    }
+
+    .event .event-left {
+        background: #5a2320;
+        min-width: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 8px 48px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .event .event-left .date {
+        font-size: 56px;
+    }
+
+    .event .event-left .month {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+        .event .event-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 24px;
+        }
+
+    .event .event-right h3.event-title {
+        font-size: 24px;
+        margin: 24px 0 10px 0;
+        color: #5a2320;
+        text-transform: uppercase;
+    }
+
+    .event .event-right .event-timing {
+        background: mintcream;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 100px;
+        padding: 8px;
+        border-style:solid;
+        border-width: 2px;
+        border-color: black;
+        border-radius: 16px;
+        margin-right: 20px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left:0px;
+        font-size: 14px;
+    }
+
+    .event .event-right .event-timing img {
+        height: 20px;
+        padding-right: 8px;
+    }
+
+    @media (max-width: 550px) {
+        .event {
+            flex-direction: column;
+        }
+
+        .event .event-left {
+            padding: 0;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .event .event-left .event-date .date,
+        .event .event-left .event-date .month {
+            display: inline-block;
+            font-size: 24px;
+        }
+
+        .event .event-left .event-date {
+            padding: 10px 0;
+        }
+    }
+
 </style>
 <title>Stuy Quantum</title>
 <link rel="shortcut icon" type="image/jpg" href="img/stuy_quantum_logo_tr.png" />
@@ -88,19 +177,19 @@
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container" id="home">
         <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">Stuy Quantum</span><br>
+        <span class="w3-jumbo w3-hide-small">StuyQuantum</span><br>
         <span class="w3-xxlarge w3-hide-large w3-hide-medium">Stuy Quantum</span><br>
         <span class="w3-large">Learn about one of the coolest and most increasingly popular fields.</span>
-        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start learning today!</a></p>
+        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off">Start learning today!</a></p>
         </div> 
-        <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
+        <div class="w3-display-topright w3-text-white w3-large" style="padding:24px 48px">
             <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
             <a href="https://www.instagram.com/stuyquantum/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
     </header>
 
     <!-- About Section -->
-    <div class="w3-container" style="padding:75px 16px" id="about">
+    <div class="w3-container" style="padding:75px 16px;background-color:mintcream;" id="about">
         <h2 class="w3-center">What is Stuy Quantum?</h2>
         <div class="w3-container w3-center" style="height: 125px;">
             <img src="img/stuy_quantum_logo_tr.png" class="rounded" />
@@ -127,7 +216,7 @@
 
         </div>
         <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
-            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Why join us?</p>
+            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Why quantum computing?</p>
             <p>What makes this organization unique is that it provides students with 
                 numerous resources and a strong community with which they can learn 
                 about quantum computing. Quantum computing is not taught in STEM 
@@ -139,7 +228,7 @@
                 and structured way, and provide a close community they can be a part of.</p>
         </div>
         <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
-            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Our Benefits</p>
+            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Why our organization?</p>
             <p>Quantum computing has become an increasingly popular and important subject. 
                 It is considered to be the future because it allows us to solve large and 
                 complex problems that would not be able to be solved on a classical computer. 
@@ -158,13 +247,48 @@
                 own, such as IBM qiskit, Microsoft azure, Google cirq, etc.</p>
         </div>
     </div>
+    <div class="w3-container" style="background-color:rgb(122, 51, 51,0.5)">
+    <div class="event-container" style="padding-bottom: 80px;padding-top: 80px;">
+        <h3 class="year">2023 Calendar</h3>
+  
+        <div class="event">
+          <div class="event-left">
+            <div class="event-date">
+              <div class="date">21</div>
+              <div class="month">Aug</div>
+            </div>
+          </div>
+  
+          <div class="event-right">
+            <h3 class="event-title">Leadership Applications Due</h3>
+  
+            <div class="event-description">
+              It's that time of year again when we are looking for some board
+              members to join our team. We have positions in three departments: 
+              content, outreach, and social media. Be sure to check out the 
+              descriptions on our Instagram page for more information!
+            </div>
+
+            <div class="w3-container" style="display:inline-flex;">
+                <div class="event-timing">
+                    <img src="img/time.png" alt="" /> 11:59 pm
+                </div>
+                <div class="event-timing">
+                    <img src="img/star.png" alt=""/> Application
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer class="w3-center w3-padding-64" style="background-color:#5a2320;color:white;">
         <div class="w3-xlarge w3-section">
             <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
             <a href="https://www.instagram.com/stuyquantum/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
         </div>
-        <p>Copyright (c) 2021 stuyquantum</p>
+        <p><a href= "https://stuyactivities.org/stuyquantum">https://stuyactivities.org/stuyquantum</a></p>
+        <p>Copyright <span>&copy</span> 2021 stuyquantum</p>
     </footer>
 </body>
 
