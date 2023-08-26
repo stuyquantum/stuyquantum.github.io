@@ -4,6 +4,10 @@
     .showyes{
         visibility: visible;
     }
+    .showno{
+        visibility: hidden;
+        margin-left: 25px;
+    }
 
     body {
     font-family: Arial, Helvetica, sans-serif;
@@ -222,14 +226,19 @@
             </div>
           </div>
     </div>
+    <div class="showno" id="showno">
+      <h1>Incorrent Password</h3>
+      <h4>Redirecting to home page...</h4>
+    </div>
     <script>
         if(prompt("Enter the password to access the page") == "stuy23/24"){}
         else{
             document.getElementById("showyes").style.display = "none";
+            document.getElementById("showno").style.visibility = "visible";
             function changeToHome(){
               window.location.href = "index.html";
             }
-            setTimeout( function() { changeToHome(); }, 10000);
+            setTimeout( function() { changeToHome(); }, 3500);
         }
         let slideIndex = [1,1];
         let slideId = ["mySlides1", "mySlides2"]
