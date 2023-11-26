@@ -78,7 +78,7 @@
     }
 
     * {box-sizing: border-box}
-    .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {display: none}
+    .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6 {display: none}
     
     img {vertical-align: middle;}
 
@@ -153,6 +153,7 @@
         <a class="active" href="content.html">Content</a>
         <a href="aboutus.html">About Us</a>
         <a href="resources.html">Resources</a>
+        <a href="fallfest.html">Fall Fest</a>
     </div>
     <div class = "showyes" id = "showyes">
          <div class="about-section">
@@ -729,6 +730,123 @@
               </div>
             </div>
           </div>
+
+          <div class="column">
+            <div class="card">
+              <!-- Slideshow container -->
+              <div class="slideshow-container">
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_1.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_2.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_3.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_4.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_5.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_6.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_7.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_8.png" style="width:100%">
+                </div>
+
+                <div class="mySlides5">
+                  <img src="img/slides6/slide6_9.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_10.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_11.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_12.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_13.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_14.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_15.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_16.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_17.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_18.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_19.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_20.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_21.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_22.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_23.png" style="width:100%">
+                </div>
+
+                <div class="mySlides6">
+                  <img src="img/slides6/slide6_24.png" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1, 5)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 5)">&#10095;</a>
+              </div>
+              <div class="container">
+                <h2>Week 5 - Quantum Circuits</h2>
+                <p class="title">11/30/2023</p>
+                <p>In this lesson, we covered what Qiskit is and the basics of how 
+                  to use it. We discussed how to add qubits and classical bits, how
+                  to draw circuits, apply gates, and more.
+                </p>
+                <p><a href="https://docs.google.com/presentation/d/14s0Ycp2yGifZzKNL5n4ZyVJ3Rkq9t4hVUx-VsK0VQGg/edit?usp=sharing"><button class="button">Link to Slides</button></a></p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
 
@@ -747,13 +865,14 @@
             }
             setTimeout( function() { changeToHome(); }, 3500);
         }
-        let slideIndex = [1,1,1,1,1];
-        let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
+        let slideIndex = [1,1,1,1,1,1];
+        let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6"]
         showSlides(1, 0);
         showSlides(1, 1);
         showSlides(1, 2);
         showSlides(1, 3);
         showSlides(1, 4);
+        showSlides(1, 5);
 
         function plusSlides(n, no) {
         showSlides(slideIndex[no] += n, no);
