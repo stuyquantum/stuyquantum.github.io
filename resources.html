@@ -65,12 +65,52 @@
     background-color: rgb(107, 78, 78);
     }
 
+    .collapsible {
+      background-color: #5a2320;
+      color: white;
+      margin-left: 10%;
+      margin-right: 10%;
+      cursor: pointer;
+      padding: 18px;
+      width: 80%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+      background-color: rgb(177, 106, 106);
+    }
+
+    .content {
+      padding: 0 18px;
+      display: none;
+      margin-left: 10%;
+      color:black;
+      margin-right: 10%;
+      width: 80%;
+      overflow: hidden;
+      background-color: #f1f1f1;
+    }
+
+    .collapsible:after {
+      color: white;
+      content: "+"; /* Unicode character for "plus" sign (+) */
+      font-size: 20px;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .padbottom{
+      margin-bottom: 5%;
+    }
+
     @media screen and (max-width: 650px) {
     .column {
         width: 100%;
         display: block;
     }
-
     }
 
     /* Add a black background color to the top navigation */
@@ -100,6 +140,63 @@
     background-color: #7a3333;
     color: rgb(255, 255, 255);
     }
+
+    .about-section .heading{
+      font-size: 32px;
+      font-weight: 1000;
+    }
+
+    .about-section .paragraph{
+      padding-top: 15px;
+      font-size: 17px;
+    }
+
+    @media only screen and (max-device-width: 1024px) {
+      .topnav a{
+        font-size: 37px;
+      }
+      
+      .column {
+        width: 50%;
+        display: block;
+      }
+
+      .about-section .heading {
+        font-size: 75px;
+      }
+
+      .about-section .paragraph {
+        padding-top: 20px;
+        font-size: 40px;
+      }
+
+      h1{
+        font-size: 75px;
+      }
+
+      h2 {
+        font-size: 50px;
+      }
+
+      p {
+        font-size: 40px;
+      }
+
+      button{
+        font-size: 35px;
+      }
+
+      .collapsible{
+        font-size: 35px;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+      }
+
+      .collapsible:after {
+        font-size: 45px;
+      }
+    }
 </style>
 <title>Stuy Quantum</title>
 <link rel="shortcut icon" type="image/jpg" href="img/stuy_quantum_logo_tr.png" />
@@ -112,10 +209,10 @@
         <a href="fallfest.html">Fall Fest</a>
       </div>
           <div class="about-section">
-            <h1 style="text-align:center">Resources</h1>
-            <p style="text-align:center">For additional information about 
+            <div class="heading" style="text-align:center">Resources</div>
+            <div class="paragraph" style="text-align:center">For additional information about 
                 quantum computing topics and the field in general check out
-                resources below.</p>
+                resources below.</div>
           </div>
           <h2 style="text-align:center">Textbooks</h2>
           <div class="row">
@@ -217,8 +314,65 @@
                   </div>
                 </div>
               </div>
+
+              <div class="column">
+                <div class="card">
+                  <img src="img/lectureseries.jpg" alt="cover" style="width:100%">
+                  <div class="container">
+                    <h2>Nathan Wiebe's Quantum Computing Videos</h2>
+                    <p>Nathan Wiebe is a researcher in quantum computing at the Univeristy of Washington who focuses on 
+                      quantum methods for machine learning and simulation of physical 
+                      systems. On Youtube, he has a series of lectures that covers many key
+                      quantum computing topics.
+                    </p>
+                    <p><a href="https://www.youtube.com/@nathanwiebe5305/videos"><button class="button">Learn More</button></a></p>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <h2 style="text-align:center;">FAQ</h2>
+          <div class="padbottom">
+            <button class="collapsible">What is Quantum Computing?</button>
+            <div class="content">
+              <p>Quantam computing is a field that combines computer science, physics,
+                and mathematics to solves complex problems faster than possible for 
+                classical computers. It ueses topics in quantum mechanics and linear
+                algebra as its foundation and the coding is done through Python.
+              </p>
+            </div>
+            <button class="collapsible">Is prior experience necessary?</button>
+            <div class="content">
+              <p>Absolutely no prior experience is necessary. We accept members of
+                any skill level and you will learn everything you need to know here. That
+                being said, members from any grade level are also welcome.
+              </p>
+            </div>
+            <button class="collapsible" ">Does StuyQuantum participate in Hackathons?</button>
+            <div class="content">
+              <p>Yes, it does! We participate in the annual MIT iQuHack competition and in
+                teh 2023-2024 school year we participated in Qiskit Fall Fest, which was 
+                similiar in nature to a hackathon. More information is available at the Fall
+                Test tab of the navigation bar.
+              </p>
+            </div>
           </div>
 
+          <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
 </body>
 
 </html>
