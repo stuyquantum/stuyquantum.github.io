@@ -15,11 +15,23 @@
         width: 40%;
     }
 
+    .icon{
+      font-size: 30px;
+    }
+
     img {
         display: inline;
         margin: 0 auto;
         height: 100%;
         width: auto;
+    }
+
+    .xxlarge {
+      font-size: 55px;
+    }
+
+    .startbutton {
+      font-size: 15px;
     }
 
     .topnav {
@@ -113,12 +125,12 @@
         font-weight: normal;
     }
 
-        .event .event-right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 24px;
-        }
+    .event .event-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 24px;
+    }
 
     .event .event-right h3.event-title {
         font-size: 24px;
@@ -171,6 +183,91 @@
         }
 
     }
+    @media only screen and (max-device-width: 1024px) {
+      .topnav a{
+        font-size: 37px;
+      }
+      .w3-display-topright i{
+        font-size: 55px;
+      }
+      .w3-largeR{
+        font-size:50px;
+      }
+      .xxlarge{
+        font-size: 100px;
+      }
+      .bgimg-1 {
+        background-position: center;
+        background-image: url("img/quantumcompcopy.jpeg");
+        min-height: 75%;
+      }
+      .startbutton{
+        font-size:40px;
+      }
+
+      .small{
+        font-size: 30px;
+      }
+
+      .w3-row-padding{
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      .aboutinfo{
+        margin-left: -100px;
+        margin-right: -100px;
+      }
+
+      /*Calendar*/
+      .event-container {
+        font-family: "Roboto", sans-serif;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .event-container .event {
+        border-radius: 30px;
+      }
+
+      .event-container h3.year {
+        font-size: 60px;
+      }
+
+      .event .event-left {
+        min-width: 180px;
+        border-radius: 30px 0 0 30px;
+      }
+
+      .event .event-left .date {
+        font-size: 100px;
+      }
+
+      .event .event-left .month {
+          font-size: 40px;
+          font-weight: normal;
+      }
+
+      .event .event-right h3.event-title {
+        font-size: 50px;
+      }
+
+      .event .event-right .event-timing {
+        font-size: 30px;
+      }
+
+      .event .event-description{
+        font-size: 30px;
+      }
+
+      footer{
+        font-size: 25px;
+      }
+
+      .icon{
+        font-size: 60px;
+      }
+    }
 
 </style>
 <title>Stuy Quantum</title>
@@ -187,10 +284,9 @@
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container" id="home">
         <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumboR w3-hide-small">StuyQuantum</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Stuy Quantum</span><br>
+        <div class="xxlarge">StuyQuantum</div><br>
         <span class="w3-largeR">Learn about one of the coolest and most increasingly popular fields.</span>
-        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off">Start learning today!</a></p>
+        <div class="startbutton"><p><a href="#about" class="w3-button w3-white w3-padding-large w3-margin-top w3-hover-opacity-off">Start learning today!</a></p></div>
         </div> 
         <div class="w3-display-topright w3-text-white w3-large" style="padding:24px 48px">
             <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
@@ -199,14 +295,15 @@
     </header>
 
     <!-- About Section -->
+    <div class="aboutinfo">
     <div class="w3-container" style="padding:75px 16px;background-color:mintcream;" id="about">
-        <h2 class="w3-center">What is Stuy Quantum?</h2>
+        <div class="w3-center w3-largeR" style="padding-bottom:25px">What is Stuy Quantum?</div>
         <div class="w3-container w3-center" style="height: 125px;">
             <img src="img/stuy_quantum_logo_tr.png" class="rounded" />
         </div>
         <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
-            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Our Purpose</p>
-            <p>StuyQuantum focuses on creating a strong community where 
+            <p class="w3-center w3-largeR" style="color:#5a2320; font-weight: bold;">Our Purpose</p>
+            <p class="small">StuyQuantum focuses on creating a strong community where 
                 students can learn about quantum computing and its different 
                 applications. This club will expose students to a realm of 
                 science they may not have learned about before and will allow 
@@ -222,12 +319,10 @@
                 azure(Microsoft), etc. We hope to have talks with experienced people 
                 in this field, visit tech companies in this field, attend hackathons, 
                 and work on long term projects as a group.</p>
-
-
         </div>
         <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
-            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Why quantum computing?</p>
-            <p>What makes this organization unique is that it provides students with 
+            <p class="w3-center w3-largeR" style="color:#5a2320; font-weight: bold;">Why quantum computing?</p>
+            <p class="small">What makes this organization unique is that it provides students with 
                 numerous resources and a strong community with which they can learn 
                 about quantum computing. Quantum computing is not taught in STEM 
                 classes in school. Our club hopes to educate students in this field, 
@@ -238,8 +333,8 @@
                 and structured way, and provide a close community they can be a part of.</p>
         </div>
         <div class="w3-row-padding w3-center" style="margin-top:32px;margin-left: 12%;margin-right: 12%;background-color:rgb(122, 51, 51,0.5);border-radius: 40px;">
-            <p class="w3-center w3-large" style="color:#5a2320; font-weight: bold;">Why our organization?</p>
-            <p>Quantum computing has become an increasingly popular and important subject. 
+            <p class="w3-center w3-largeR" style="color:#5a2320; font-weight: bold;">Why our organization?</p>
+            <p class="small">Quantum computing has become an increasingly popular and important subject. 
                 It is considered to be the future because it allows us to solve large and 
                 complex problems that would not be able to be solved on a classical computer. 
                 As such, it is important for students to be able to learn about this interesting, 
@@ -255,7 +350,8 @@
                 to practice their skills, including possible hackathons, visits to companies, 
                 long-term club projects, resources and tools with which they can explore on their 
                 own, such as IBM qiskit, Microsoft azure, Google cirq, etc.</p>
-        </div>
+          </div>
+      </div>
     </div>
     <div class="w3-container" style="background-color:rgb(122, 51, 51,0.5)">
     <div class="event-container" style="padding-bottom: 80px;padding-top: 80px;">
@@ -449,13 +545,93 @@
             </div>
           </div>
 
+          <div class="event">
+            <div class="event-left">
+              <div class="event-date">
+                <div class="date">30</div>
+                <div class="month">Nov</div>
+              </div>
+            </div>
+    
+            <div class="event-right">
+              <h3 class="event-title">Week 5 Meeting</h3>
+    
+              <div class="event-description">
+                This week we will get into programming quantum gates and circuits.
+                You will need this information for the Qiskit Fall Fest 2023. We
+                will also be answering any questions related to the challenges in
+                the Jupyter Notebook, so be sure to come and ask!
+              </div>
+  
+              <div class="w3-container" style="display:inline-flex;">
+                  <div class="event-timing">
+                      <img src="img/time.png" alt="" /> 3:45 pm
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="event-left">
+              <div class="event-date">
+                <div class="date">7</div>
+                <div class="month">Dec</div>
+              </div>
+            </div>
+    
+            <div class="event-right">
+              <h3 class="event-title">Week 6 Meeting</h3>
+    
+              <div class="event-description">
+                This week we will get continue looking into quantum gates, but we
+                will now be focusing on two qubit gates and entanglement. 
+                Entanglement is a fundamental quantum phenomenon and will continue
+                to play a major role in our later meetings.
+              </div>
+  
+              <div class="w3-container" style="display:inline-flex;">
+                  <div class="event-timing">
+                      <img src="img/time.png" alt="" /> 3:45 pm
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event">
+            <div class="event-left">
+              <div class="event-date">
+                <div class="date">14</div>
+                <div class="month">Dec</div>
+              </div>
+            </div>
+    
+            <div class="event-right">
+              <h3 class="event-title">Week 7 Meeting</h3>
+    
+              <div class="event-description">
+                This week we will be putting everything we have done so far together
+                and looing deeper at quantum circuits, as well as quantum algorithms.
+                We will be having a slightly shorter meeting this week and it will be
+                our last meeting of 2023! Have a wonderful winter break everyone!
+              </div>
+  
+              <div class="w3-container" style="display:inline-flex;">
+                  <div class="event-timing">
+                      <img src="img/time.png" alt="" /> 3:45 pm
+                  </div>
+              </div>
+            </div>
+          </div>
+
       </div>
     </div>
     <!-- Footer -->
     <footer class="w3-center w3-padding-64" style="background-color:#5a2320;color:white;">
-        <div class="w3-xlarge w3-section">
-            <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href="https://www.instagram.com/stuyquantum/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <div class="icon">
+          <div class="w3-section">
+              <a href="https://www.facebook.com/stuyquantum/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+              <a href="https://www.instagram.com/stuyquantum/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+          </div>
         </div>
         <p><a href= "https://stuyactivities.org/stuyquantum">https://stuyactivities.org/stuyquantum</a></p>
         <p>Copyright <span>&copy</span> 2021 stuyquantum</p>
