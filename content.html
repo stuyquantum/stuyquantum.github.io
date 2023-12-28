@@ -146,6 +146,50 @@
     background-color: #7a3333;
     color: rgb(255, 255, 255);
     }
+
+    @media only screen and (max-device-width: 1024px) {
+      .topnav a{
+        font-size: 37px;
+      }
+
+      .column {
+        width: 100%;
+        display: block;
+      }
+
+      .about-section .heading {
+        font-size: 75px;
+      }
+
+      .about-section .paragraph {
+        padding-top: 20px;
+        font-size: 40px;
+      }
+
+      h1{
+        font-size: 75px;
+      }
+
+      h2 {
+        font-size: 50px;
+      }
+
+      h4 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 40px;
+      }
+
+      button{
+        font-size: 35px;
+      }
+
+      .prev, .next {
+        font-size: 35px;
+      }
+    }
 </style>
 <title>Stuy Quantum</title>
 <link rel="shortcut icon" type="image/jpg" href="img/stuy_quantum_logo_tr.png" />
@@ -159,10 +203,10 @@
     </div>
     <div class = "showyes" id = "showyes">
          <div class="about-section">
-            <h1 style="text-align:center">Past Lessons</h1>
-            <p style="text-align:center">Below are our slideshows that we 
+            <div class="heading" style="text-align:center">Past Lessons</div>
+            <div class="paragraph" style="text-align:center">Below are our slideshows that we 
             during our meetings. Feel free to click the links to the
-          google slides presentations.</p>
+          google slides presentations.</div>
           </div>
           <h2 style="text-align:center">Our Slideshows</h2>
           <div class="row">
@@ -854,7 +898,7 @@
 
     </div>
     <div class="showno" id="showno">
-      <h1>Incorrent Password</h3>
+      <h1>Incorrent Password</h1>
       <h4>Redirecting to home page...</h4>
     </div>
     <script>
