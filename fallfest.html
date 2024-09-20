@@ -7,7 +7,7 @@
     body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-color: #28343a;
+    background-color: rgb(252, 252, 229);
     }
 
     html {
@@ -82,7 +82,7 @@
     background-size: contain;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url("img/fallFest2024Logo.png");
+    background-image: url("img/fallFestLogo.png");
     width: 100%;
     height: auto;
     color: rgb(0, 0, 0);
@@ -178,7 +178,7 @@
         font-size: 37px;
       }
       .about-section{
-        background-image: url("img/fallFest2024Logobig.png");
+        background-image: url("img/fallFestLogobig.png");
         background-position: right;
         background-repeat: no-repeat;
         background-size: auto 100%;
@@ -244,15 +244,15 @@
       </div>
       <div class="about-section"></div>
       <div class="intro">
-        <span style="padding:2px; color:rgb(255, 255, 255)">About the Event</span>
+        <span style="border: thick rgb(0, 0, 0) solid; background:black; padding:2px; color:rgb(255, 255, 255)">About the Event</span>
       </div>   
     <div class="row">
       <div class="column">
-          <div class="card" style="background-image: linear-gradient(to bottom right, rgba(100,149,237,0.7), rgba(105, 13, 211, 0.8))">
+          <div class="card" style="background-image: linear-gradient(to bottom right, rgba(100,149,237,0.7), rgb(181, 241, 223, 0.8))">
               <div class="container" onclick="openTab('b1');">
                   <h2>What is Fall Fest?</h2>
               </div>
-              <div id="b1" class="containerTab" style="display:show">
+              <div id="b1" class="containerTab" style="display:show"">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <p>The Qiskit Fall Fest is a collection of quantum computing events
                     that traditionally take place on college campuses around the world,
@@ -266,18 +266,18 @@
           </div>
       </div>
       <div class="column">
-        <div class="card" style="background-image: linear-gradient(to bottom left, rgba(26, 37, 255, 0.5), rgba(159, 114, 255, 0.9), rgba(255, 52, 248, 0.9))">
+        <div class="card" style="background-image: linear-gradient(to bottom left, rgba(39, 114, 79, 0.5), rgba(76, 170, 134, 0.9), rgba(86, 128, 77, 0.9))">
             <div class="container" onclick="openTab('b2');">
                 <h2>How To Participate</h2>
             </div>
             <div id="b2" class="containerTab" style="display:show">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <h2>When?</h2>
-                <p>The event will start on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)"> 
-                    November 21, 2024</span> at 3:45pm and will end on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)">
-                    November 28, 2024</span> at 11:59pm.</p>
+                <p>The event will start on Saturday,<span style="font-weight:bold;color:rgb(255, 199, 197)"> 
+                    November 25, 2023</span> at 8:00pm and will end on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)">
+                    November 30, 2023</span> at 11:59pm.</p>
                 <p>For assistance or a place to work, come to the weekly meeting on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)">
-                    November 21</span> and <span style="font-weight:bold;color:rgb(255, 199, 197)">November 28</span>.</p>
+                    November 30, 2023</span>.</p>
                 <h2>Who?</h2>
                 <p>Anyone can participate! You do not have to be part of StuyQuantum, but if you find the 
                     challenges to be at all interesting, consider joining! Note that only Stuyvesant students will
@@ -287,7 +287,7 @@
                 <p>The task at hand is to complete the challenge problems within a Jupyter Notebook
                     we created. No prior experience is necessary and before starting, you should
                     look over our week 5 slides to explore ciruit making. Note: you will need to have an 
-                    Qbraid (free to make) to access the Jupyter Notebook. More 
+                    IBM quantum experience account (free to make) to access the Jupyter Notebook. More 
                     detailed instructions are shown below.
                 </p>
             </div>
@@ -315,7 +315,7 @@
     </div>
       <div class = "row">
         <div class="intro">
-            <span style="color:rgb(255, 255, 255)">Instructions</span>
+            <span style="border: thick rgb(0, 0, 0) solid; background:black; padding:2px; color:rgb(255, 255, 255)">Instructions</span>
         </div> 
       </div>
       <div class="todo">
@@ -323,7 +323,7 @@
               <h2>1</h2>
           </div>
           <div class="instructions">
-            <h2 style="color:black">Create an <a href="https://account.qbraid.com/" style="color:rgb(92, 22, 158)">Qbraid</a> Account.</h2>
+            <h2 style="color:black">Create an <a href="https://quantum-computing.ibm.com/login" style="color:rgb(92, 22, 158)">IBM Quantum Experience</a> Account.</h2>
           </div>
       </div>
       <div class="todo">
@@ -331,7 +331,8 @@
             <h2>2</h2>
         </div>
         <div class="instructions">
-        <h2 style="color:black;">Near the top, press "Launch Lab".</h2>
+        <h2 style="color:black;">Near the bottom, under the "Learning" box, 
+            click <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjl5-TV3N-CAxXyv4kEHYmEBUIQFnoECA0QAQ&url=https%3A%2F%2Fquantum-computing.ibm.com%2Flab&usg=AOvVaw0OnGFqKUwhp8gVfAaVMDlo&opi=89978449" style="color:rgb(92, 22, 158)">IBM Quantum Lab</a>.</h2>
         </div>
       </div>
       <div class="todo">
@@ -373,8 +374,8 @@
             <h2>7</h2>
         </div>
         <div class="instructions">
-            <h2 style="color:black">Download <a href="https://github.com/stuyquantum/qiskitfallfest2024" style="color:rgb(92, 22, 158)">the notebook</a> of challenges we created,
-              open the notebook in Qbraid, and go through it.</h2>
+            <h2 style="color:black">Download <a href="https://github.com/stuyquantum/qiskitfallfest2023" style="color:rgb(92, 22, 158)">the notebook</a> of challenges we created,
+              open the notebook in IBM Quantum Experience, and go through it.</h2>
         </div>
       </div>
       <div class="todo">
@@ -382,7 +383,7 @@
             <h2>8</h2>
         </div>
         <div class="instructions">
-            <h2 style="color:black">Fill out the <a href="https://forms.gle/q8fnA8fe8YGnM58J8" style="color:rgb(92, 22, 158)">submission google form</a> before November 28th 
+            <h2 style="color:black">Fill out the <a href="https://forms.gle/mzMeNFoNyBjkwzG4A" style="color:rgb(92, 22, 158)">submission google form</a> before November 30th 
             even if you aren't fully done.</h2>
         </div>
       </div>
