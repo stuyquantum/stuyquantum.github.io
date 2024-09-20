@@ -1,2 +1,2 @@
-# zhar-ptitsa.github.io
-Zhar-ptitsa's personal StuyQuantum test website
+# stuyquantum.github.io
+StuyQuantum website
