@@ -38,21 +38,30 @@
     }
 
     .todo {
+    border-width: 3px;
     border-style: solid;
-    border-color: black;
-    display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-image: linear-gradient(to right, #b30086, purple) 1;
+
+    flex-direction: row;
     background-color: rgba(240, 239, 239, 0.6);
-    margin-top:3%;
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 3%;
-    padding-right: 2%;
     align-items: center;
-    border-radius:25px;
-    color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
     font-family:"Monaco";
     font-size: 80%;
+    }
+
+    #header {
+      color: #000000;
+      background-color: #7B7B7B;
+      border: 5px solid #4B4047;
+      margin: 0px;
+      font-size: 20px;
+      padding-left: 10px;
+      line-height: 1px;
     }
 
     .instructions{
@@ -74,6 +83,48 @@
     border-radius: 50%;
     width: 10vw;
     height: 10vw;
+    }
+
+    .tab {
+      overflow: hidden;
+      background-image: linear-gradient(to right, #202020, black);
+      display: flex;
+      justify-content: left;
+      gap: 8px;
+      padding: 8px 10px;
+    }
+
+    .tab button {
+      font-family:"Monaco";
+      background-color: #202020;
+      border: #B31978;
+      border-left: 10px;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      color: #EDEDED;
+      letter-spacing: 2px;
+    }
+
+    .tab button:hover {
+      background-color: #a6a6a6;
+    }
+
+    .tab button.active {
+      background-color: #323232;
+    }
+
+    .tabcontent {
+      display: none;
+      width: 100%;
+      padding: 20px;
+      padding-top: 1px;
+      display: none;
+      background-color: #4D4D4D;
+      color: #EDEDED;
+      font-size: 10px;
+      border: #B31978;
     }
 
     .about-section {
@@ -234,7 +285,7 @@
 </style>
 <title>Stuy Quantum</title>
 <link rel="shortcut icon" type="image/jpg" href="img/stuy_quantum_logo_tr.png" />
-<body>  
+<body>
       <div class="topnav">
         <a href="index.html">Home</a>
         <a href="content.html">Content</a>
@@ -245,7 +296,7 @@
       <div class="about-section"></div>
       <div class="intro">
         <span style="padding:2px; color:rgb(255, 255, 255)">About the Event</span>
-      </div>   
+      </div>
     <div class="row">
       <div class="column">
           <div class="card" style="background-image: linear-gradient(to bottom right, rgba(100,149,237,0.7), rgba(105, 13, 211, 0.8))">
@@ -258,7 +309,7 @@
                     that traditionally take place on college campuses around the world,
                     but in our case it will take place in our high school. The event is
                     run and organized by the StuyQuantum leaders with the support of IBM
-                    Quantum. There will be some beginner-level challenges designed to 
+                    Quantum. There will be some beginner-level challenges designed to
                     help understanding of basic quantum computing concepts. The event will
                     occur virtually and in-person during Thursday club meetings.
                 </p>
@@ -273,21 +324,21 @@
             <div id="b2" class="containerTab" style="display:show">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <h2>When?</h2>
-                <p>The event will start on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)"> 
+                <p>The event will start on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)">
                     November 21, 2024</span> at 3:45pm and will end on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)">
                     November 28, 2024</span> at 11:59pm.</p>
                 <p>For assistance or a place to work, come to the weekly meeting on Thursday,<span style="font-weight:bold;color:rgb(255, 199, 197)">
                     November 21</span> and <span style="font-weight:bold;color:rgb(255, 199, 197)">November 28</span>.</p>
                 <h2>Who?</h2>
-                <p>Anyone can participate! You do not have to be part of StuyQuantum, but if you find the 
+                <p>Anyone can participate! You do not have to be part of StuyQuantum, but if you find the
                     challenges to be at all interesting, consider joining! Note that only Stuyvesant students will
                     be able to attend the Thursday meeting.
                 </p>
                 <h2>How?</h2>
                 <p>The task at hand is to complete the challenge problems within a Jupyter Notebook
                     we created. No prior experience is necessary and before starting, you should
-                    look over our week 5 slides to explore ciruit making. Note: you will need to have an 
-                    Qbraid (free to make) to access the Jupyter Notebook. More 
+                    look over our week 5 slides to explore ciruit making. Note: you will need to have an
+                    Qbraid (free to make) to access the Jupyter Notebook. More
                     detailed instructions are shown below.
                 </p>
             </div>
@@ -301,11 +352,11 @@
             <div id="b3" class="containerTab" style="display:show">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
                 <h2>Qiskit Merch</h2>
-                <p>After the submission deadline, we will go through all of the submissions 
+                <p>After the submission deadline, we will go through all of the submissions
                     and, depending on availability, the best submissions with receive merch.
                 </p>
                 <h2>Certificate of Completion</h2>
-                <p>Everyone who has a submission will recieve a certificate of completion. 
+                <p>Everyone who has a submission will recieve a certificate of completion.
                     Even if all of the parts of the challeneges aren't correct, you should
                     still submit it before the deadline for the certificate!
                 </p>
@@ -316,75 +367,28 @@
       <div class = "row">
         <div class="intro">
             <span style="color:rgb(255, 255, 255)">Instructions</span>
-        </div> 
+        </div>
       </div>
       <div class="todo">
-          <div class="circle">
-              <h2>1</h2>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'tab1')">BEGIN</button>
+          <button class="tablinks" onclick="openCity(event, 'tab2')">BEGIN</button>
+          <button class="tablinks" onclick="openCity(event, 'tab3')">BEGIN</button>
+        </div>
+        <div id="header">
+          <p>Re: Initializer sabotaged</p>
+        </div>
+          <div id="tab1" class="tabcontent" style="display: block;">
+            <h2>Greetings recruits,<br><br>  We thank you for your willingness to come to our assistance in a time of need. As of 0345 today, one of our automated remote quantum computing facilities has been hijacked and is giving us qubits that are already entangled. Until we are able to take back control over the facility, we need you to undo the damage further in the circuits. For each circuit, attempt to return it to a |000...000> type state for as high of a probability as you can so that we can run our code with minimal issues.</br></br><br><i>Attached below are the various systems you have at your disposal</i></br><br>Tools:</br><ol><li>...</li><li>...</li><li>...</li><li>...</li><li>...</li></ol><br>-Command Center Q</br></h2>
+          <div id="tab2" class="tabcontent">
+            <h1 id="header">Step 2</h1>
+            <h2>Near the top, press "Launch Lab".</h2>
           </div>
-          <div class="instructions">
-            <h2 style="color:black">Create an <a href="https://account.qbraid.com/" style="color:rgb(92, 22, 158)">Qbraid</a> Account.</h2>
-          </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>2</h2>
-        </div>
-        <div class="instructions">
-        <h2 style="color:black;">Near the top, press "Launch Lab".</h2>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>3</h2>
-        </div>
-        <div class="instructions">
-            <h2 style="color:black;">Create a "Python 3 (ipykernel)" notebook.</h2>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>4</h2>
-        </div>
-        <div class="instructions">
-            <h2 style="color:black">(Optional) Check out the <a href="https://github.com/Serenacg22/Fall-Fest-2023/raw/main/Qiskit%20Fall%20Fest%20Challenges%202023.zip" style="color:rgb(92, 22, 158)">challenge</a> labs from Qiskit.</h2>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>5</h2>
-        </div>
-        <div class="instructions">
-            <h2 style="color:black">Look at the Week 5 slides - found under the <a href="content.html" style="color:rgb(92, 22, 158)">content</a> tab - 
-            starting on slide 13 to learn how to build quantum circuits! Reach out to us for the content page password.</h2>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>6</h2>
-        </div>
-        <div class="instructions">
-            <h2 style="color:black">Follow the slides and experiment using the notebook (to run a cell on the notebook, 
-            either click the play button at the top or press shift + enter on your keyboard). </h2>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>7</h2>
-        </div>
-        <div class="instructions">
-            <h2 style="color:black">Download <a href="https://github.com/stuyquantum/qiskitfallfest2024" style="color:rgb(92, 22, 158)">the notebook</a> of challenges we created,
+          <div id="tab3" class="tabcontent">
+            <h1 id="header">Step 3</h1>
+            <h2>Download <a href="https://github.com/stuyquantum/qiskitfallfest2024" style="color:rgb(92, 22, 158)">the notebook</a> of challenges we created,
               open the notebook in Qbraid, and go through it.</h2>
-        </div>
-      </div>
-      <div class="todo">
-        <div class="circle">
-            <h2>8</h2>
-        </div>
-        <div class="instructions">
-            <h2 style="color:black">Fill out the <a href="https://forms.gle/q8fnA8fe8YGnM58J8" style="color:rgb(92, 22, 158)">submission google form</a> before November 28th 
-            even if you aren't fully done.</h2>
-        </div>
+          </div>
       </div>
 
       <script>
@@ -392,6 +396,20 @@
           var i, x;
           x = document.getElementsByClassName("containerTab");
           document.getElementById(tabName).style.display = "block";
+        }
+
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
         }
       </script>
 
