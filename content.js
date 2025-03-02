@@ -8,7 +8,7 @@ function loadImages(number, count){
     var files = {'png':count};
     for (var ext in files){
         for (var i = 0; i < files[ext]; i++){
-            var src = "img/"+"Slides"+number+"/" + "slide"+number + "_" + (i+1) + "." + ext;
+            var src = "img/"+"slides"+number+"/" + "slide"+number + "_" + (i+1) + "." + ext;
             console.log(src);
             var img = new Image(); 
             img.src = src;
